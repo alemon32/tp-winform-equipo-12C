@@ -1,7 +1,7 @@
 ﻿
 namespace TPWinForm_Equipo12C
 {
-    partial class FormularioPrincipal
+    partial class FormInicio
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace TPWinForm_Equipo12C
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioPrincipal));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInicio));
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.comboBoxCriterio = new System.Windows.Forms.ComboBox();
             this.comboBoxCampo = new System.Windows.Forms.ComboBox();
@@ -54,6 +54,7 @@ namespace TPWinForm_Equipo12C
             this.buttonBuscar.Size = new System.Drawing.Size(37, 29);
             this.buttonBuscar.TabIndex = 21;
             this.buttonBuscar.UseVisualStyleBackColor = true;
+            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
             // comboBoxCriterio
             // 
@@ -70,6 +71,7 @@ namespace TPWinForm_Equipo12C
             this.comboBoxCampo.Name = "comboBoxCampo";
             this.comboBoxCampo.Size = new System.Drawing.Size(139, 24);
             this.comboBoxCampo.TabIndex = 19;
+            this.comboBoxCampo.SelectedIndexChanged += new System.EventHandler(this.comboBoxCampo_SelectedIndexChanged);
             // 
             // textBoxFiltro
             // 
@@ -104,6 +106,7 @@ namespace TPWinForm_Equipo12C
             this.buttonEliminar.TabIndex = 15;
             this.buttonEliminar.Text = "Eliminar";
             this.buttonEliminar.UseVisualStyleBackColor = true;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // buttonModificiar
             // 
@@ -113,6 +116,7 @@ namespace TPWinForm_Equipo12C
             this.buttonModificiar.TabIndex = 14;
             this.buttonModificiar.Text = "Modificar";
             this.buttonModificiar.UseVisualStyleBackColor = true;
+            this.buttonModificiar.Click += new System.EventHandler(this.buttonModificiar_Click);
             // 
             // buttonAgregar
             // 
@@ -122,6 +126,7 @@ namespace TPWinForm_Equipo12C
             this.buttonAgregar.TabIndex = 13;
             this.buttonAgregar.Text = "Agregar";
             this.buttonAgregar.UseVisualStyleBackColor = true;
+            this.buttonAgregar.Click += new System.EventHandler(this.buttonAgregar_Click);
             // 
             // pictureBoxArticulo
             // 
@@ -142,8 +147,9 @@ namespace TPWinForm_Equipo12C
             this.dataGridViewArticuloBD.RowTemplate.Height = 24;
             this.dataGridViewArticuloBD.Size = new System.Drawing.Size(961, 244);
             this.dataGridViewArticuloBD.TabIndex = 11;
+            this.dataGridViewArticuloBD.SelectionChanged += new System.EventHandler(this.dataGridViewArticuloBD_SelectionChanged);
             // 
-            // FormularioPrincipal
+            // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -159,8 +165,9 @@ namespace TPWinForm_Equipo12C
             this.Controls.Add(this.buttonAgregar);
             this.Controls.Add(this.pictureBoxArticulo);
             this.Controls.Add(this.dataGridViewArticuloBD);
-            this.Name = "FormularioPrincipal";
+            this.Name = "FormInicio";
             this.Text = "Administracion de Articulos";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticulo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArticuloBD)).EndInit();
             this.ResumeLayout(false);

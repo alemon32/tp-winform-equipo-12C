@@ -1,7 +1,7 @@
 ﻿
 namespace TPWinForm_Equipo12C
 {
-    partial class FormAltaBajaModificaciones
+    partial class FormAltaBajaModificacion
     {
         /// <summary>
         /// Required designer variable.
@@ -80,6 +80,7 @@ namespace TPWinForm_Equipo12C
             this.textBoxUrlImagen.Name = "textBoxUrlImagen";
             this.textBoxUrlImagen.Size = new System.Drawing.Size(171, 22);
             this.textBoxUrlImagen.TabIndex = 40;
+            this.textBoxUrlImagen.Leave += new System.EventHandler(this.textBoxUrlImagen_Leave);
             // 
             // labelUrlImagen
             // 
@@ -134,6 +135,7 @@ namespace TPWinForm_Equipo12C
             this.buttonCancelar.TabIndex = 44;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // buttonAceptar
             // 
@@ -143,6 +145,7 @@ namespace TPWinForm_Equipo12C
             this.buttonAceptar.TabIndex = 43;
             this.buttonAceptar.Text = "Aceptar";
             this.buttonAceptar.UseVisualStyleBackColor = true;
+            this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click);
             // 
             // textBoxDescripcion
             // 
@@ -192,7 +195,7 @@ namespace TPWinForm_Equipo12C
             this.labelCodArticulo.TabIndex = 35;
             this.labelCodArticulo.Text = "Codigo:";
             // 
-            // FormAltaBajaModificaciones
+            // FormAltaBajaModificacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -214,8 +217,9 @@ namespace TPWinForm_Equipo12C
             this.Controls.Add(this.labelDescripcion);
             this.Controls.Add(this.labelNombre);
             this.Controls.Add(this.labelCodArticulo);
-            this.Name = "FormAltaBajaModificaciones";
+            this.Name = "FormAltaBajaModificacion";
             this.Text = "Alta/Baja/Modificacion";
+            this.Load += new System.EventHandler(this.FormAltaBajaModificacion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

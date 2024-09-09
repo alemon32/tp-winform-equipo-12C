@@ -16,7 +16,7 @@ namespace TPWinForm_Equipo12C
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormularioPrincipal());
+            Application.Run(new FormInicio());
         }
     }
 }
