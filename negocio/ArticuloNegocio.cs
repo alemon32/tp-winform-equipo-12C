@@ -79,13 +79,35 @@ namespace negocio
 
             try
             {
-                datos.setarConsulta("Insert into ARTICULOS (Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria)values(@codigo, @nombre, @descripcion, @precio, @idMarca, @idCategoria)");
+                
+                datos.setarConsulta("Insert into ARTICULOS (Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria) OUTPUT INSERTED.Id values(@codigo, @nombre, @descripcion, @precio, @idMarca, @idCategoria)");
+
+                
                 datos.setearParametro("@codigo", nuevoArticulo.CodArticulo);
                 datos.setearParametro("@nombre", nuevoArticulo.Nombre);
                 datos.setearParametro("@descripcion", nuevoArticulo.Descripcion);
                 datos.setearParametro("@precio", nuevoArticulo.Precio);
                 datos.setearParametro("@idMarca", nuevoArticulo.Marca.Id);
                 datos.setearParametro("@idCategoria", nuevoArticulo.Categoria.Id);
+
+                
+                object resultado = datos.ejecutarEscalar();
+
+                if (resultado == null)
+                {
+                    throw new Exception("Error al insertar el artículo. El Id generado es nulo.");
+                }
+
+                int idArticulo = (int)resultado; 
+
+                
+                datos.setarConsulta("Insert into IMAGENES (IdArticulo, ImagenUrl) values (@id, @ImagenUrl)");
+
+                
+                datos.setearParametro("@id", idArticulo); 
+                datos.setearParametro("@ImagenUrl", nuevoArticulo.ImagenUrl);
+
+                
                 datos.ejectuarAccion();
             }
             catch (Exception ex)
@@ -97,6 +119,8 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
+
+
 
         public void eliminar(int id)
         {
