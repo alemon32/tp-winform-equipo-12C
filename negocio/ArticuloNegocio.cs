@@ -52,14 +52,13 @@ namespace negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setarConsulta("update ARTICULOS set Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, ImagenUrl = @imagen, IdMarca = @idMarca, IdCategoria = @idCategoria, Precio = @precio where Id = @id");
+                datos.setarConsulta("update ARTICULOS set Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idMarca, IdCategoria = @idCategoria, Precio = @precio where Id = @id");
                 datos.setearParametro("@id", art.Id);
                 datos.setearParametro("@codigo", art.CodArticulo);
                 datos.setearParametro("@nombre", art.Nombre);
                 datos.setearParametro("@descripcion", art.Descripcion);
                 datos.setearParametro("idMarca", art.Marca.Id);
                 datos.setearParametro("@idCategoria", art.Categoria.Id);
-                datos.setearParametro("@imagen", art.ImagenUrl);
                 datos.setearParametro("@precio", art.Precio);
 
                 datos.ejectuarAccion();
@@ -80,14 +79,13 @@ namespace negocio
 
             try
             {
-                datos.setarConsulta("Insert into ARTICULOS (Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria)values(@codigo, @nombre, @descripcion, @precio, @idMarca, @idCategoria, @imagen)");
+                datos.setarConsulta("Insert into ARTICULOS (Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria)values(@codigo, @nombre, @descripcion, @precio, @idMarca, @idCategoria)");
                 datos.setearParametro("@codigo", nuevoArticulo.CodArticulo);
                 datos.setearParametro("@nombre", nuevoArticulo.Nombre);
                 datos.setearParametro("@descripcion", nuevoArticulo.Descripcion);
                 datos.setearParametro("@precio", nuevoArticulo.Precio);
                 datos.setearParametro("@idMarca", nuevoArticulo.Marca.Id);
                 datos.setearParametro("@idCategoria", nuevoArticulo.Categoria.Id);
-                datos.setearParametro("@imagen", nuevoArticulo.ImagenUrl);
                 datos.ejectuarAccion();
             }
             catch (Exception ex)
