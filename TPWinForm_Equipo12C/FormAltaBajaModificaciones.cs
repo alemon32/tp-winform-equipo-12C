@@ -35,16 +35,43 @@ namespace TPWinForm_Equipo12C
             this.Close();
         }
 
+        private bool soloNumeros(string cadena)
+        {
+            foreach (char caracter in cadena)
+            {
+                if (!(char.IsNumber(caracter)))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private bool validarFiltro()
+        {
+                if (!(soloNumeros(textBoxPrecio.Text)))
+                {
+                    MessageBox.Show("Por favor ingresar solo numeros");
+                    return true;
+                }
+            
+
+            return false;
+        }
+
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
 
             try
             {
+
                 if (articulo == null)
                 {
                     articulo = new Articulo();
                 }
+                if (validarFiltro())
+                    return;
 
                 articulo.CodArticulo = textBoxCodArticulo.Text;
                 articulo.Nombre = textBoxNombre.Text;
@@ -125,6 +152,11 @@ namespace TPWinForm_Equipo12C
             {
                 pictureBoxArticulo.Load("https://www.came-educativa.com.ar/wp-content/uploads/2022/03/placeholder-3.png");
             }
+        }
+
+        private void textBoxPrecio_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

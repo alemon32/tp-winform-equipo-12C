@@ -51,7 +51,7 @@ namespace TPWinForm_Equipo12C
             this.buttonBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonBuscar.BackgroundImage")));
             this.buttonBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonBuscar.Location = new System.Drawing.Point(452, 2);
-            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(28, 24);
             this.buttonBuscar.TabIndex = 21;
@@ -60,18 +60,20 @@ namespace TPWinForm_Equipo12C
             // 
             // comboBoxCriterio
             // 
+            this.comboBoxCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCriterio.FormattingEnabled = true;
             this.comboBoxCriterio.Location = new System.Drawing.Point(216, 4);
-            this.comboBoxCriterio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxCriterio.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCriterio.Name = "comboBoxCriterio";
             this.comboBoxCriterio.Size = new System.Drawing.Size(105, 21);
             this.comboBoxCriterio.TabIndex = 20;
             // 
             // comboBoxCampo
             // 
+            this.comboBoxCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCampo.FormattingEnabled = true;
             this.comboBoxCampo.Location = new System.Drawing.Point(60, 5);
-            this.comboBoxCampo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxCampo.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCampo.Name = "comboBoxCampo";
             this.comboBoxCampo.Size = new System.Drawing.Size(105, 21);
             this.comboBoxCampo.TabIndex = 19;
@@ -80,7 +82,7 @@ namespace TPWinForm_Equipo12C
             // textBoxFiltro
             // 
             this.textBoxFiltro.Location = new System.Drawing.Point(344, 5);
-            this.textBoxFiltro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxFiltro.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxFiltro.Name = "textBoxFiltro";
             this.textBoxFiltro.Size = new System.Drawing.Size(95, 20);
             this.textBoxFiltro.TabIndex = 18;
@@ -108,7 +110,7 @@ namespace TPWinForm_Equipo12C
             // buttonEliminar
             // 
             this.buttonEliminar.Location = new System.Drawing.Point(60, 362);
-            this.buttonEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonEliminar.Name = "buttonEliminar";
             this.buttonEliminar.Size = new System.Drawing.Size(194, 32);
             this.buttonEliminar.TabIndex = 15;
@@ -119,7 +121,7 @@ namespace TPWinForm_Equipo12C
             // buttonModificiar
             // 
             this.buttonModificiar.Location = new System.Drawing.Point(60, 324);
-            this.buttonModificiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonModificiar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonModificiar.Name = "buttonModificiar";
             this.buttonModificiar.Size = new System.Drawing.Size(194, 32);
             this.buttonModificiar.TabIndex = 14;
@@ -130,7 +132,7 @@ namespace TPWinForm_Equipo12C
             // buttonAgregar
             // 
             this.buttonAgregar.Location = new System.Drawing.Point(60, 287);
-            this.buttonAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAgregar.Name = "buttonAgregar";
             this.buttonAgregar.Size = new System.Drawing.Size(194, 32);
             this.buttonAgregar.TabIndex = 13;
@@ -141,7 +143,7 @@ namespace TPWinForm_Equipo12C
             // pictureBoxArticulo
             // 
             this.pictureBoxArticulo.Location = new System.Drawing.Point(344, 247);
-            this.pictureBoxArticulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxArticulo.Name = "pictureBoxArticulo";
             this.pictureBoxArticulo.Size = new System.Drawing.Size(362, 193);
             this.pictureBoxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -153,7 +155,7 @@ namespace TPWinForm_Equipo12C
             this.dataGridViewArticuloBD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewArticuloBD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewArticuloBD.Location = new System.Drawing.Point(9, 44);
-            this.dataGridViewArticuloBD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewArticuloBD.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewArticuloBD.Name = "dataGridViewArticuloBD";
             this.dataGridViewArticuloBD.RowHeadersWidth = 51;
             this.dataGridViewArticuloBD.RowTemplate.Height = 24;
@@ -187,7 +189,7 @@ namespace TPWinForm_Equipo12C
             this.Controls.Add(this.buttonAgregar);
             this.Controls.Add(this.pictureBoxArticulo);
             this.Controls.Add(this.dataGridViewArticuloBD);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormInicio";
             this.Text = "Administracion de Articulos";
             this.Load += new System.EventHandler(this.Form1_Load);
