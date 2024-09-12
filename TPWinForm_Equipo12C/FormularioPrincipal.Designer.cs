@@ -171,6 +171,7 @@ namespace TPWinForm_Equipo12C
             this.buttonLimpiar.TabIndex = 22;
             this.buttonLimpiar.Text = "\r\n";
             this.buttonLimpiar.UseVisualStyleBackColor = true;
+            this.buttonLimpiar.Click += new System.EventHandler(this.buttonLimpiar_Click);
             // 
             // FormInicio
             // 

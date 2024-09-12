@@ -191,5 +191,19 @@ namespace TPWinForm_Equipo12C
             }
         }
 
+        private void buttonLimpiar_Click(object sender, EventArgs e)
+        {
+            comboBoxCampo.Items.Clear();
+            comboBoxCriterio.Items.Clear();
+            textBoxFiltro.Clear();
+
+            cargar();
+            comboBoxCampo.Items.Add("Codigo Articulo");
+            comboBoxCampo.Items.Add("Nombre");
+            comboBoxCampo.Items.Add("Marca");
+            comboBoxCampo.Items.Add("Categoria");
+            comboBoxCampo.Items.Add("Precio");
+
+        }
     }
 }
