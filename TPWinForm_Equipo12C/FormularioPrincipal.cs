@@ -205,5 +205,14 @@ namespace TPWinForm_Equipo12C
             comboBoxCampo.Items.Add("Precio");
 
         }
+
+        private void btnAgregarImagen_Click(object sender, EventArgs e)
+        {
+            Articulo selecionado;
+            selecionado = (Articulo)dataGridViewArticuloBD.CurrentRow.DataBoundItem;
+
+            FormAgregadoImagen form2 = new FormAgregadoImagen(selecionado);
+            form2.ShowDialog();
+        }
     }
 }

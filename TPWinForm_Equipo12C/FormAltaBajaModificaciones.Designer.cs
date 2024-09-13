@@ -52,11 +52,10 @@ namespace TPWinForm_Equipo12C
             // textBoxPrecio
             // 
             this.textBoxPrecio.Location = new System.Drawing.Point(84, 154);
-            this.textBoxPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPrecio.Name = "textBoxPrecio";
             this.textBoxPrecio.Size = new System.Drawing.Size(129, 20);
             this.textBoxPrecio.TabIndex = 49;
-            this.textBoxPrecio.TextChanged += new System.EventHandler(this.textBoxPrecio_TextChanged);
             // 
             // labelPrecio
             // 
@@ -70,8 +69,8 @@ namespace TPWinForm_Equipo12C
             // 
             // pictureBoxArticulo
             // 
-            this.pictureBoxArticulo.Location = new System.Drawing.Point(247, 11);
-            this.pictureBoxArticulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxArticulo.Location = new System.Drawing.Point(249, 11);
+            this.pictureBoxArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxArticulo.Name = "pictureBoxArticulo";
             this.pictureBoxArticulo.Size = new System.Drawing.Size(182, 177);
             this.pictureBoxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -81,7 +80,7 @@ namespace TPWinForm_Equipo12C
             // textBoxUrlImagen
             // 
             this.textBoxUrlImagen.Location = new System.Drawing.Point(84, 83);
-            this.textBoxUrlImagen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxUrlImagen.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxUrlImagen.Name = "textBoxUrlImagen";
             this.textBoxUrlImagen.Size = new System.Drawing.Size(129, 20);
             this.textBoxUrlImagen.TabIndex = 40;
@@ -102,7 +101,7 @@ namespace TPWinForm_Equipo12C
             this.comboBoxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCategoria.FormattingEnabled = true;
             this.comboBoxCategoria.Location = new System.Drawing.Point(84, 130);
-            this.comboBoxCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCategoria.Name = "comboBoxCategoria";
             this.comboBoxCategoria.Size = new System.Drawing.Size(129, 21);
             this.comboBoxCategoria.TabIndex = 42;
@@ -112,7 +111,7 @@ namespace TPWinForm_Equipo12C
             this.comboBoxMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMarca.FormattingEnabled = true;
             this.comboBoxMarca.Location = new System.Drawing.Point(84, 106);
-            this.comboBoxMarca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxMarca.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxMarca.Name = "comboBoxMarca";
             this.comboBoxMarca.Size = new System.Drawing.Size(129, 21);
             this.comboBoxMarca.TabIndex = 41;
@@ -140,7 +139,7 @@ namespace TPWinForm_Equipo12C
             // buttonCancelar
             // 
             this.buttonCancelar.Location = new System.Drawing.Point(134, 184);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(64, 27);
             this.buttonCancelar.TabIndex = 44;
@@ -151,7 +150,7 @@ namespace TPWinForm_Equipo12C
             // buttonAceptar
             // 
             this.buttonAceptar.Location = new System.Drawing.Point(14, 184);
-            this.buttonAceptar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAceptar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAceptar.Name = "buttonAceptar";
             this.buttonAceptar.Size = new System.Drawing.Size(64, 27);
             this.buttonAceptar.TabIndex = 43;
@@ -162,7 +161,7 @@ namespace TPWinForm_Equipo12C
             // textBoxDescripcion
             // 
             this.textBoxDescripcion.Location = new System.Drawing.Point(84, 60);
-            this.textBoxDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxDescripcion.Name = "textBoxDescripcion";
             this.textBoxDescripcion.Size = new System.Drawing.Size(129, 20);
             this.textBoxDescripcion.TabIndex = 38;
@@ -170,7 +169,7 @@ namespace TPWinForm_Equipo12C
             // textBoxNombre
             // 
             this.textBoxNombre.Location = new System.Drawing.Point(84, 37);
-            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(129, 20);
             this.textBoxNombre.TabIndex = 36;
@@ -178,7 +177,7 @@ namespace TPWinForm_Equipo12C
             // textBoxCodArticulo
             // 
             this.textBoxCodArticulo.Location = new System.Drawing.Point(84, 15);
-            this.textBoxCodArticulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxCodArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCodArticulo.Name = "textBoxCodArticulo";
             this.textBoxCodArticulo.Size = new System.Drawing.Size(129, 20);
             this.textBoxCodArticulo.TabIndex = 34;
@@ -235,7 +234,7 @@ namespace TPWinForm_Equipo12C
             this.Controls.Add(this.labelDescripcion);
             this.Controls.Add(this.labelNombre);
             this.Controls.Add(this.labelCodArticulo);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormAltaBajaModificacion";
             this.Text = "Alta/Baja/Modificacion";
             this.Load += new System.EventHandler(this.FormAltaBajaModificacion_Load);

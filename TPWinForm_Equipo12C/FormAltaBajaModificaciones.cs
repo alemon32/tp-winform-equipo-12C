@@ -39,11 +39,18 @@ namespace TPWinForm_Equipo12C
         {
             foreach (char caracter in cadena)
             {
-                if (!(char.IsNumber(caracter)))
+                if (!(char.IsNumber(caracter) || caracter == ','))
                 {
                     return false;
                 }
             }
+
+            int contadorPuntos = cadena.Count(c => c == ',');
+            if (contadorPuntos > 1)
+            {
+                return false;
+            }
+
             return true;
         }
 
@@ -123,6 +130,7 @@ namespace TPWinForm_Equipo12C
                     comboBoxMarca.SelectedValue = articulo.Marca.Id;
                     comboBoxCategoria.SelectedValue = articulo.Categoria.Id;
                     textBoxPrecio.Text = articulo.Precio.ToString();
+                    
                 }
             }
             catch (Exception ex)
@@ -154,9 +162,6 @@ namespace TPWinForm_Equipo12C
             }
         }
 
-        private void textBoxPrecio_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

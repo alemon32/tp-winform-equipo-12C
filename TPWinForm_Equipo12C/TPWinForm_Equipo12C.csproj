@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAgregadoImagen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgregadoImagen.Designer.cs">
+      <DependentUpon>FormAgregadoImagen.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAltaBajaModificaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAgregadoImagen.resx">
+      <DependentUpon>FormAgregadoImagen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAltaBajaModificaciones.resx">
       <DependentUpon>FormAltaBajaModificaciones.cs</DependentUpon>
     </EmbeddedResource>

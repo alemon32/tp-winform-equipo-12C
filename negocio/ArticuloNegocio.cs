@@ -122,6 +122,39 @@ namespace negocio
             }
         }
 
+        public void agregarImagen(Articulo nuevoArticulo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+
+
+                if (nuevoArticulo.Id == 0)
+                {
+                    throw new Exception("El artículo no tiene un Id válido. Debe estar registrado antes de agregar una imagen.");
+                }
+
+
+                datos.setarConsulta("Insert into IMAGENES (IdArticulo, ImagenUrl) values (@id, @ImagenUrl)");
+
+
+                datos.setearParametro("@id", nuevoArticulo.Id);
+                datos.setearParametro("@ImagenUrl", nuevoArticulo.ImagenUrl);
+
+
+                datos.ejectuarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
 
 
         public void eliminar(int id)

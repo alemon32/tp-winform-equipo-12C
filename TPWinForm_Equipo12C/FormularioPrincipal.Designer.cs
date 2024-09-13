@@ -42,6 +42,7 @@ namespace TPWinForm_Equipo12C
             this.pictureBoxArticulo = new System.Windows.Forms.PictureBox();
             this.dataGridViewArticuloBD = new System.Windows.Forms.DataGridView();
             this.buttonLimpiar = new System.Windows.Forms.Button();
+            this.btnAgregarImagen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArticuloBD)).BeginInit();
             this.SuspendLayout();
@@ -173,11 +174,22 @@ namespace TPWinForm_Equipo12C
             this.buttonLimpiar.UseVisualStyleBackColor = true;
             this.buttonLimpiar.Click += new System.EventHandler(this.buttonLimpiar_Click);
             // 
+            // btnAgregarImagen
+            // 
+            this.btnAgregarImagen.Location = new System.Drawing.Point(247, 417);
+            this.btnAgregarImagen.Name = "btnAgregarImagen";
+            this.btnAgregarImagen.Size = new System.Drawing.Size(92, 23);
+            this.btnAgregarImagen.TabIndex = 23;
+            this.btnAgregarImagen.Text = "Agregar imagen";
+            this.btnAgregarImagen.UseVisualStyleBackColor = true;
+            this.btnAgregarImagen.Click += new System.EventHandler(this.btnAgregarImagen_Click);
+            // 
             // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(736, 456);
+            this.Controls.Add(this.btnAgregarImagen);
             this.Controls.Add(this.buttonLimpiar);
             this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.comboBoxCriterio);
@@ -215,6 +227,7 @@ namespace TPWinForm_Equipo12C
         private System.Windows.Forms.PictureBox pictureBoxArticulo;
         private System.Windows.Forms.DataGridView dataGridViewArticuloBD;
         private System.Windows.Forms.Button buttonLimpiar;
+        private System.Windows.Forms.Button btnAgregarImagen;
     }
 }
 
