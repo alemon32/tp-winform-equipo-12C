@@ -17,7 +17,8 @@ namespace negocio
             {
                 AccesoDatos datos = new AccesoDatos();
 
-                datos.setarConsulta("select A.Codigo, A.Nombre, A.Descripcion, A.Precio, C.Descripcion Categoria, M.Descripcion Marca, I.ImagenUrl, A.Id, A.IdMarca, A.IdCategoria from ARTICULOS A, CATEGORIAS C, MARCAS M, IMAGENES I where C.Id=A.IdCategoria and M.Id=A.IdMarca and A.Id=I.IdArticulo");
+                //datos.setarConsulta("select A.Codigo, A.Nombre, A.Descripcion, A.Precio, C.Descripcion Categoria, M.Descripcion Marca, I.ImagenUrl, A.Id, A.IdMarca, A.IdCategoria from ARTICULOS A, CATEGORIAS C, MARCAS M, IMAGENES I where C.Id=A.IdCategoria and M.Id=A.IdMarca and A.Id=I.IdArticulo");
+                datos.setarConsulta("SELECT A.Codigo, A.Nombre, A.Descripcion, A.Precio, C.Descripcion AS Categoria, M.Descripcion AS Marca, MAX(I.ImagenUrl) AS ImagenUrl, A.Id, A.IdMarca, A.IdCategoria FROM ARTICULOS A JOIN CATEGORIAS C ON C.Id = A.IdCategoria JOIN MARCAS M ON M.Id = A.IdMarca JOIN IMAGENES I ON A.Id = I.IdArticulo GROUP BY A.Codigo, A.Nombre, A.Descripcion, A.Precio, C.Descripcion, M.Descripcion, A.Id, A.IdMarca, A.IdCategoria");
                 datos.ejectuarLectura();
 
                 while (datos.Lector.Read())
