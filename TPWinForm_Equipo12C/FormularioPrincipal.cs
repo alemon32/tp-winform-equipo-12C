@@ -50,6 +50,7 @@ namespace TPWinForm_Equipo12C
         {
             dataGridViewArticuloBD.Columns["ImagenUrl"].Visible = false;
             dataGridViewArticuloBD.Columns["Id"].Visible = false;
+            dataGridViewArticuloBD.Columns["idArticulo"].Visible = false;
         }
 
         private void cargarImagen(string imagen)

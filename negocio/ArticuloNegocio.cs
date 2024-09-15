@@ -165,6 +165,11 @@ namespace negocio
                 datos.setarConsulta("Delete from ARTICULOS Where Id = @id");
                 datos.setearParametro("@id", id);
                 datos.ejectuarAccion();
+
+                AccesoDatos datos1 = new AccesoDatos();
+                datos1.setarConsulta("Delete from IMAGENES Where IdArticulo = @id");
+                datos1.setearParametro("@id", id);
+                datos1.ejectuarAccion();
             }
             catch (Exception ex)
             {
