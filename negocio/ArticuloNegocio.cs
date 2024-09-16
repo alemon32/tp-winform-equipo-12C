@@ -54,7 +54,7 @@ namespace negocio
             try
             {
                 datos.setarConsulta("update ARTICULOS set Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idMarca, IdCategoria = @idCategoria, Precio = @precio where Id = @id");
-                datos.setarConsulta("update IMAGENES set ImagenUrl = @imagenUrl where IdArticulo = @id");
+                datos.setarConsulta("update IMAGENES set ImagenUrl = @imagenUrl where IdArticulo = @id and ImagenUrl = @imagenUrlAux");
                 datos.setearParametro("@id", art.Id);
                 datos.setearParametro("@codigo", art.CodArticulo);
                 datos.setearParametro("@nombre", art.Nombre);
@@ -63,6 +63,7 @@ namespace negocio
                 datos.setearParametro("@idCategoria", art.Categoria.Id);
                 datos.setearParametro("@precio", art.Precio);
                 datos.setearParametro("@imagenUrl", art.ImagenUrl);
+                datos.setearParametro("@imagenUrlAux", art.ImgAux);
 
                 datos.ejectuarAccion();
             }

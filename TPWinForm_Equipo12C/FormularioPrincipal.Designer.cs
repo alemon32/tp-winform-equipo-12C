@@ -46,6 +46,7 @@ namespace TPWinForm_Equipo12C
             this.btNext = new System.Windows.Forms.Button();
             this.btPrevious = new System.Windows.Forms.Button();
             this.buttonAgregarCategoria = new System.Windows.Forms.Button();
+            this.buttonAgregarMarcar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArticuloBD)).BeginInit();
             this.SuspendLayout();
@@ -219,11 +220,22 @@ namespace TPWinForm_Equipo12C
             this.buttonAgregarCategoria.UseVisualStyleBackColor = true;
             this.buttonAgregarCategoria.Click += new System.EventHandler(this.buttonAgregarCategoria_Click);
             // 
+            // buttonAgregarMarcar
+            // 
+            this.buttonAgregarMarcar.Location = new System.Drawing.Point(1015, 445);
+            this.buttonAgregarMarcar.Name = "buttonAgregarMarcar";
+            this.buttonAgregarMarcar.Size = new System.Drawing.Size(259, 40);
+            this.buttonAgregarMarcar.TabIndex = 28;
+            this.buttonAgregarMarcar.Text = "Agregar Marca";
+            this.buttonAgregarMarcar.UseVisualStyleBackColor = true;
+            this.buttonAgregarMarcar.Click += new System.EventHandler(this.buttonAgregarMarcar_Click);
+            // 
             // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1286, 631);
+            this.Controls.Add(this.buttonAgregarMarcar);
             this.Controls.Add(this.buttonAgregarCategoria);
             this.Controls.Add(this.btPrevious);
             this.Controls.Add(this.btNext);
@@ -269,6 +281,7 @@ namespace TPWinForm_Equipo12C
         private System.Windows.Forms.Button btNext;
         private System.Windows.Forms.Button btPrevious;
         private System.Windows.Forms.Button buttonAgregarCategoria;
+        private System.Windows.Forms.Button buttonAgregarMarcar;
     }
 }
 

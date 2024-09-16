@@ -90,11 +90,27 @@ namespace TPWinForm_Equipo12C
 
                 if (articulo.Id != 0)
                 {
+                    articulo.CodArticulo = textBoxCodArticulo.Text;
+                    articulo.Nombre = textBoxNombre.Text;
+                    articulo.Descripcion = textBoxDescripcion.Text;
+                    articulo.ImagenUrl = textBoxUrlImagen.Text;
+                    articulo.Marca = (Marca)comboBoxMarca.SelectedItem;
+                    articulo.Categoria = (Categoria)comboBoxCategoria.SelectedItem;
+                    articulo.Precio = decimal.Parse(textBoxPrecio.Text);
+
                     negocio.modificar(articulo);
                     MessageBox.Show("Articulo modificado en el inventario");
                 }
                 else
                 {
+                    articulo.CodArticulo = textBoxCodArticulo.Text;
+                    articulo.Nombre = textBoxNombre.Text;
+                    articulo.Descripcion = textBoxDescripcion.Text;
+                    articulo.ImagenUrl = textBoxUrlImagen.Text;
+                    articulo.Marca = (Marca)comboBoxMarca.SelectedItem;
+                    articulo.Categoria = (Categoria)comboBoxCategoria.SelectedItem;
+                    articulo.Precio = decimal.Parse(textBoxPrecio.Text);
+
                     negocio.agregar(articulo);
                     MessageBox.Show("Articulo agregado en el inventario");
                 }
@@ -111,6 +127,10 @@ namespace TPWinForm_Equipo12C
         {
             MarcaNegocio marcaNegocio = new MarcaNegocio();
             CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+
+            
+
+
             try
             {
                 comboBoxMarca.DataSource = marcaNegocio.listar();
@@ -130,7 +150,7 @@ namespace TPWinForm_Equipo12C
                     comboBoxMarca.SelectedValue = articulo.Marca.Id;
                     comboBoxCategoria.SelectedValue = articulo.Categoria.Id;
                     textBoxPrecio.Text = articulo.Precio.ToString();
-                    
+                    articulo.ImgAux = articulo.ImagenUrl;
                 }
             }
             catch (Exception ex)

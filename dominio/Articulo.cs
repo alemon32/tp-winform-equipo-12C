@@ -16,6 +16,7 @@ namespace dominio
         public Categoria Categoria { get; set; }
         public decimal Precio { get; set; }
         public int indiceImg { get; set; } // Atributo que utilizare para poder moverme entre las imagenes segun el indice/posicion
+        public string ImgAux { get; set; }
 
         public Articulo() // Constructir para "obligar" a q cada Articulo al ser instanciado tenga por defecto el indice de Imagen en la primera posicion
         {

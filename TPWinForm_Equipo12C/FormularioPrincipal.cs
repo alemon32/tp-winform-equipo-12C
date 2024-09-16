@@ -250,10 +250,6 @@ namespace TPWinForm_Equipo12C
                 seleccionado.indiceImg = maximo - 1;
                 cargarImagen(lista[seleccionado.indiceImg]);
             }
-
-            // Al principio este evento si "segui" haciendo clic volvia a la primera imagen (como que daba una "vuelta) - SOLUCINADO
-            // Pero no logro comprender o ver porque motivo tengo que hacer 2 clic para avanzar por primera vez
-
         }
 
         private void btPrevious_Click(object sender, EventArgs e)
@@ -277,6 +273,12 @@ namespace TPWinForm_Equipo12C
         private void buttonAgregarCategoria_Click(object sender, EventArgs e)
         {
             FormAgregarCategoria aux = new FormAgregarCategoria();
+            aux.ShowDialog();
+        }
+
+        private void buttonAgregarMarcar_Click(object sender, EventArgs e)
+        {
+            FormAgregarMarca aux = new FormAgregarMarca();
             aux.ShowDialog();
         }
     }

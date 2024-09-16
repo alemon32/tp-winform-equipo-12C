@@ -86,7 +86,7 @@ namespace TPWinForm_Equipo12C
 
                 articulo.CodArticulo = textBoxCodArticulo2.Text;
                 articulo.Nombre = textBoxNombre2.Text;
-                
+                articulo.ImagenUrl = textBoxUrlImagen2.Text;
 
                 if (articulo.Id != 0)
                 {

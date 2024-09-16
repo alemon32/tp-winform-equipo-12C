@@ -26,6 +26,7 @@ namespace TPWinForm_Equipo12C
             CategoriaNegocio negocio = new CategoriaNegocio();
             negocio.agregarCategoria(nueva);
             MessageBox.Show("Categoria agregada correctamente");
+            Close();
         }
 
         private void buttonSalir_Click(object sender, EventArgs e)
