@@ -291,5 +291,38 @@ namespace negocio
                 throw ex;
             }
         }
+
+        public List<string> vectorImagenes(int id)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            List<string> lista = new List<string>();
+
+
+            try
+            {
+                datos.setarConsulta("select Id, idArticulo, ImagenUrl from IMAGENES");
+                datos.ejectuarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    if (!((datos.Lector["ImagenUrl"] is DBNull)) && (id == (int)datos.Lector["IdArticulo"]))
+                        lista.Add((string)datos.Lector["ImagenUrl"]);
+
+
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
+
     }
 }

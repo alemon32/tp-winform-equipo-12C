@@ -43,6 +43,8 @@ namespace TPWinForm_Equipo12C
             this.dataGridViewArticuloBD = new System.Windows.Forms.DataGridView();
             this.buttonLimpiar = new System.Windows.Forms.Button();
             this.btnAgregarImagen = new System.Windows.Forms.Button();
+            this.btNext = new System.Windows.Forms.Button();
+            this.btPrevious = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArticuloBD)).BeginInit();
             this.SuspendLayout();
@@ -158,7 +160,7 @@ namespace TPWinForm_Equipo12C
             this.dataGridViewArticuloBD.Name = "dataGridViewArticuloBD";
             this.dataGridViewArticuloBD.RowHeadersWidth = 51;
             this.dataGridViewArticuloBD.RowTemplate.Height = 24;
-            this.dataGridViewArticuloBD.Size = new System.Drawing.Size(961, 244);
+            this.dataGridViewArticuloBD.Size = new System.Drawing.Size(1262, 244);
             this.dataGridViewArticuloBD.TabIndex = 11;
             this.dataGridViewArticuloBD.SelectionChanged += new System.EventHandler(this.dataGridViewArticuloBD_SelectionChanged);
             // 
@@ -167,7 +169,7 @@ namespace TPWinForm_Equipo12C
             this.buttonLimpiar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonLimpiar.BackgroundImage")));
             this.buttonLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonLimpiar.Location = new System.Drawing.Point(647, 2);
-            this.buttonLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.buttonLimpiar.Name = "buttonLimpiar";
             this.buttonLimpiar.Size = new System.Drawing.Size(44, 28);
             this.buttonLimpiar.TabIndex = 22;
@@ -177,20 +179,42 @@ namespace TPWinForm_Equipo12C
             // 
             // btnAgregarImagen
             // 
-            this.btnAgregarImagen.Location = new System.Drawing.Point(329, 513);
-            this.btnAgregarImagen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregarImagen.Location = new System.Drawing.Point(1015, 351);
+            this.btnAgregarImagen.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarImagen.Name = "btnAgregarImagen";
-            this.btnAgregarImagen.Size = new System.Drawing.Size(123, 28);
+            this.btnAgregarImagen.Size = new System.Drawing.Size(259, 41);
             this.btnAgregarImagen.TabIndex = 23;
             this.btnAgregarImagen.Text = "Agregar imagen";
             this.btnAgregarImagen.UseVisualStyleBackColor = true;
             this.btnAgregarImagen.Click += new System.EventHandler(this.btnAgregarImagen_Click);
             // 
+            // btNext
+            // 
+            this.btNext.Location = new System.Drawing.Point(711, 547);
+            this.btNext.Name = "btNext";
+            this.btNext.Size = new System.Drawing.Size(75, 23);
+            this.btNext.TabIndex = 24;
+            this.btNext.Text = ">";
+            this.btNext.UseVisualStyleBackColor = true;
+            this.btNext.Click += new System.EventHandler(this.btNext_Click);
+            // 
+            // btPrevious
+            // 
+            this.btPrevious.Location = new System.Drawing.Point(603, 547);
+            this.btPrevious.Name = "btPrevious";
+            this.btPrevious.Size = new System.Drawing.Size(75, 23);
+            this.btPrevious.TabIndex = 25;
+            this.btPrevious.Text = "<";
+            this.btPrevious.UseVisualStyleBackColor = true;
+            this.btPrevious.Click += new System.EventHandler(this.btPrevious_Click);
+            // 
             // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(981, 561);
+            this.ClientSize = new System.Drawing.Size(1286, 631);
+            this.Controls.Add(this.btPrevious);
+            this.Controls.Add(this.btNext);
             this.Controls.Add(this.btnAgregarImagen);
             this.Controls.Add(this.buttonLimpiar);
             this.Controls.Add(this.buttonBuscar);
@@ -230,6 +254,8 @@ namespace TPWinForm_Equipo12C
         private System.Windows.Forms.DataGridView dataGridViewArticuloBD;
         private System.Windows.Forms.Button buttonLimpiar;
         private System.Windows.Forms.Button btnAgregarImagen;
+        private System.Windows.Forms.Button btNext;
+        private System.Windows.Forms.Button btPrevious;
     }
 }
 

@@ -38,7 +38,10 @@ namespace TPWinForm_Equipo12C
                 listaArticulo = negocio.listar();
                 dataGridViewArticuloBD.DataSource = listaArticulo;
                 ocultarColumnas();
-                cargarImagen(listaArticulo[0].ImagenUrl);
+                //cargarImagen(listaArticulo[0].ImagenUrl);
+                List<string> imagenes = new List<string>();
+                imagenes = negocio.vectorImagenes(listaArticulo[0].Id);
+                cargarImagen(imagenes[listaArticulo[0].indiceImg]);
             }
             catch (Exception ex)
             {
@@ -51,6 +54,7 @@ namespace TPWinForm_Equipo12C
             dataGridViewArticuloBD.Columns["ImagenUrl"].Visible = false;
             dataGridViewArticuloBD.Columns["Id"].Visible = false;
             dataGridViewArticuloBD.Columns["idArticulo"].Visible = false;
+            dataGridViewArticuloBD.Columns["indiceImg"].Visible = false;
         }
 
         private void cargarImagen(string imagen)
@@ -70,7 +74,17 @@ namespace TPWinForm_Equipo12C
             if (dataGridViewArticuloBD.CurrentRow != null)
             {
                 Articulo selecionado = (Articulo)dataGridViewArticuloBD.CurrentRow.DataBoundItem;
-                cargarImagen(selecionado.ImagenUrl);
+                ArticuloNegocio negocio = new ArticuloNegocio();
+                List<string> lista = new List<string>();
+                lista = negocio.vectorImagenes(selecionado.Id);
+                try
+                {
+                    cargarImagen(lista[selecionado.indiceImg]);
+                }
+                catch (Exception ex)
+                {
+                    cargarImagen("https://www.google.com/url?sa=i&url=https%3A%2F%2Fes.vecteezy.com%2Farte-vectorial%2F4141669-sin-foto-o-imagen-en-blanco-icono-cargando-imagenes-o-imagen-faltante-marca-imagen-no-disponible-o-imagen-proxima-firmar-simple-naturaleza-silueta-en-marco-ilustracion-vectorial-aislada&psig=AOvVaw1ZXUe6w0_LG2hEINy0rxN0&ust=1714442133108000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJiq3eeo5oUDFQAAAAAdAAAAABAE");
+                }
             }
         }
 
@@ -214,6 +228,50 @@ namespace TPWinForm_Equipo12C
 
             FormAgregadoImagen form2 = new FormAgregadoImagen(selecionado);
             form2.ShowDialog();
+        }
+
+        private void btNext_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            Articulo seleccionado;
+
+            seleccionado = (Articulo)dataGridViewArticuloBD.CurrentRow.DataBoundItem;
+            List<string> lista = new List<string>();
+            lista = negocio.vectorImagenes(seleccionado.Id);
+            int maximo = lista.Count;
+
+            if (seleccionado.indiceImg < maximo - 1)
+            { 
+                seleccionado.indiceImg++;
+                cargarImagen(lista[seleccionado.indiceImg]); 
+            }
+            else if (seleccionado.indiceImg == maximo - 1)
+            {
+                seleccionado.indiceImg = maximo - 1;
+                cargarImagen(lista[seleccionado.indiceImg]);
+            }
+
+            // Al principio este evento si "segui" haciendo clic volvia a la primera imagen (como que daba una "vuelta) - SOLUCINADO
+            // Pero no logro comprender o ver porque motivo tengo que hacer 2 clic para avanzar por primera vez
+
+        }
+
+        private void btPrevious_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            Articulo seleccionado;
+
+            seleccionado = (Articulo)dataGridViewArticuloBD.CurrentRow.DataBoundItem;
+            List<string> lista = new List<string>();
+            lista = negocio.vectorImagenes(seleccionado.Id);
+            int maximo = lista.Count;
+
+            if (seleccionado.indiceImg == 0)
+                seleccionado.indiceImg = 0;
+            else
+                seleccionado.indiceImg--;
+
+            cargarImagen(lista[seleccionado.indiceImg]);
         }
     }
 }
