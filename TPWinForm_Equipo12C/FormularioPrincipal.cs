@@ -273,5 +273,11 @@ namespace TPWinForm_Equipo12C
 
             cargarImagen(lista[seleccionado.indiceImg]);
         }
+
+        private void buttonAgregarCategoria_Click(object sender, EventArgs e)
+        {
+            FormAgregarCategoria aux = new FormAgregarCategoria();
+            aux.ShowDialog();
+        }
     }
 }

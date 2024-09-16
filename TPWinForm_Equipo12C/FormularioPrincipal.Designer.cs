@@ -45,6 +45,7 @@ namespace TPWinForm_Equipo12C
             this.btnAgregarImagen = new System.Windows.Forms.Button();
             this.btNext = new System.Windows.Forms.Button();
             this.btPrevious = new System.Windows.Forms.Button();
+            this.buttonAgregarCategoria = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArticuloBD)).BeginInit();
             this.SuspendLayout();
@@ -208,11 +209,22 @@ namespace TPWinForm_Equipo12C
             this.btPrevious.UseVisualStyleBackColor = true;
             this.btPrevious.Click += new System.EventHandler(this.btPrevious_Click);
             // 
+            // buttonAgregarCategoria
+            // 
+            this.buttonAgregarCategoria.Location = new System.Drawing.Point(1015, 399);
+            this.buttonAgregarCategoria.Name = "buttonAgregarCategoria";
+            this.buttonAgregarCategoria.Size = new System.Drawing.Size(259, 40);
+            this.buttonAgregarCategoria.TabIndex = 27;
+            this.buttonAgregarCategoria.Text = "Agregar Categoria";
+            this.buttonAgregarCategoria.UseVisualStyleBackColor = true;
+            this.buttonAgregarCategoria.Click += new System.EventHandler(this.buttonAgregarCategoria_Click);
+            // 
             // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1286, 631);
+            this.Controls.Add(this.buttonAgregarCategoria);
             this.Controls.Add(this.btPrevious);
             this.Controls.Add(this.btNext);
             this.Controls.Add(this.btnAgregarImagen);
@@ -256,6 +268,7 @@ namespace TPWinForm_Equipo12C
         private System.Windows.Forms.Button btnAgregarImagen;
         private System.Windows.Forms.Button btNext;
         private System.Windows.Forms.Button btPrevious;
+        private System.Windows.Forms.Button buttonAgregarCategoria;
     }
 }
 
